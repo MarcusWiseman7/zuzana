@@ -16,9 +16,6 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Caveat|Material+Icons' }
-    ],
-    script: [
-      { src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyAbrrZs9_pt2z36Q50NHmJ8728HMtNVcYQ" }
     ]
   },
   router: {

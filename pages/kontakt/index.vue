@@ -52,11 +52,11 @@ export default {
       zoom: 14
     }
   },
-  mounted() {
-    this.$map = new google.maps.Map(document.getElementById('map'), {
-      center: new google.maps.LatLng(this.lat, this.lng), zoom: this.zoom
-    })
-  },
+  // mounted() {
+  //   this.$map = new google.maps.Map(document.getElementById('map'), {
+  //     center: new google.maps.LatLng(this.lat, this.lng), zoom: this.zoom
+  //   })
+  // },
   computed: {
     binding () {
       const binding = {}
