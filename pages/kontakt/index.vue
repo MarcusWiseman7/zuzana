@@ -47,16 +47,17 @@ export default {
         { link: 'https://www.facebook.com/profile.php?id=100009177529273', icon: 'fab fa-facebook-square' },
         { link: 'mailto:cvicovestec@gmail.com', icon: 'fas fa-envelope' }
       ],
-      lat: 49.9836736,
-      lng: 14.506301000000007,
-      zoom: 14
+      center: { lat: 49.9836736, lng: 14.506301000000007 },
+      zoom: 15
     }
   },
-  // mounted() {
-  //   this.$map = new google.maps.Map(document.getElementById('map'), {
-  //     center: new google.maps.LatLng(this.lat, this.lng), zoom: this.zoom
-  //   })
-  // },
+  mounted() {
+    this.$map = new this.$google.maps.Map(document.getElementById('map'), {
+      center: new this.$google.maps.LatLng(this.center),
+      zoom: this.zoom
+    }),
+    this.$marker = new this.$google.maps.Marker({ position: this.center, map: this.$map })
+  },
   computed: {
     binding () {
       const binding = {}
@@ -83,6 +84,7 @@ p
   letter-spacing .5px
 .gmap
   height 300px
+  width 95%
 .v-card
   padding-top 15%
 @media screen and (min-width 600px)

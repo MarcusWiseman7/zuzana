@@ -1,4 +1,9 @@
 const pkg = require('./package')
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/<repository-name>/'
+  }
+} : {}
 
 module.exports = {
   mode: 'spa',
@@ -18,9 +23,10 @@ module.exports = {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Caveat|Material+Icons' }
     ]
   },
-  router: {
-    base: '/zuzana/'
-  },
+  // router: {
+  //   base: '/zuzana/'
+  // },
+  ...routerBase,
   /*
   ** Customize the progress-bar color
   */
@@ -45,7 +51,11 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    ['nuxt-google-maps-module', {
+      /* module options */
+      key: 'AIzaSyCVigyU8MS0c_UMndHnuodKxH62Ensl2Zs', // Default
+    }]
   ],
   /*
   ** Axios module configuration
