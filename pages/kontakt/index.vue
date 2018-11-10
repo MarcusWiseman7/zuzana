@@ -29,9 +29,9 @@
               <p>Sportovni centrum TJ Viktoria Vestec</p>
               <p>U hriste 575, Vestec</p>
             </v-card-text>
-            <v-card-media>
+            <v-responsive>
               <div id="map" class="gmap"></div>
-            </v-card-media>
+            </v-responsive>
           </v-card>
         </v-flex>
       </v-layout>
@@ -83,6 +83,8 @@ p
   letter-spacing .5px
 .gmap
   height 300px
+.v-card
+  padding-top 15%
 @media screen and (min-width 600px)
   .v-image
     max-height 600px

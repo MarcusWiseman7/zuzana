@@ -3,7 +3,7 @@
     <v-container>
       <v-layout justify-center row v-bind="binding" ref="app">
         <v-flex xs12 sm6 md4>
-          <v-img :src="require('~/assets/pics/profile.png')"></v-img>
+          <v-img :src="require('~/assets/pics/zprofile.jpg')"></v-img>
         </v-flex>
         <v-flex xs12 sm6>
           <v-container>
@@ -20,15 +20,15 @@
         </v-flex>
       </v-layout>
       <v-layout>
-        <v-container-fluid class="my-5">
+        <v-container class="my-5 pl-0">
           <h1 class="mb-3">Co se u nás děje?</h1>
           <h3>V našem fitness bez problémů můžete využít kartu MultiSport</h3>
-        </v-container-fluid>
+        </v-container>
       </v-layout>
     </v-container>
 
     <nuxt-link to="/rozpis_lekci">
-    <v-container-fluid>
+    <v-container fluid class="pa-0">
       <v-layout row wrap>
         <v-flex xs6 sm4
           v-for="(item, index) in items"
@@ -41,7 +41,7 @@
           </v-card>
         </v-flex>
       </v-layout>
-    </v-container-fluid>
+    </v-container>
     </nuxt-link>
   </div>
 </template>
