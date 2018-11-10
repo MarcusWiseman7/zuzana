@@ -1,13 +1,4 @@
 const pkg = require('./package')
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/zuzana/'
-  }
-} : {}
-
-export default {
-  ...routerBase
-}
 
 module.exports = {
   mode: 'spa',
@@ -30,7 +21,9 @@ module.exports = {
       { src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyAbrrZs9_pt2z36Q50NHmJ8728HMtNVcYQ" }
     ]
   },
-
+  router: {
+    base: '/zuzana/'
+  },
   /*
   ** Customize the progress-bar color
   */
