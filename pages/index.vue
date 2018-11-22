@@ -34,7 +34,7 @@
           v-for="(item, index) in items"
           :key="index"
         >
-          <nuxt-link :to="item.link">
+          <nuxt-link :to="item.link" exact>
             <v-card height="100%" tile dark flat>
               <v-card-text>
                 <h2>{{ item.title }}</h2>
