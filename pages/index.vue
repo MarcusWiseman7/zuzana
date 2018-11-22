@@ -27,22 +27,24 @@
       </v-layout>
     </v-container>
 
-    <nuxt-link to="/rozpis_lekci">
+    
     <v-container fluid class="pa-0">
       <v-layout row wrap>
         <v-flex xs6 sm4
           v-for="(item, index) in items"
           :key="index"
         >
-          <v-card height="100%" tile dark flat>
-            <v-card-text>
-              <h2>{{ item.title }}</h2>
-            </v-card-text>
-          </v-card>
+          <nuxt-link :to="item.link">
+            <v-card height="100%" tile dark flat>
+              <v-card-text>
+                <h2>{{ item.title }}</h2>
+              </v-card-text>
+            </v-card>
+          </nuxt-link>
         </v-flex>
       </v-layout>
     </v-container>
-    </nuxt-link>
+    
   </div>
 </template>
 
@@ -52,12 +54,12 @@ export default {
   data () {
     return {
       items: [
-        { title: 'BodyART' },
-        { title: 'DeepWORK' },
-        { title: 'Spinning' },
-        { title: 'Power joga' },
-        { title: 'Bosu' },
-        { title: 'Kruhový trénink' }
+        { title: 'BodyART', link: '/exercises/#bodyart' },
+        { title: 'DeepWORK', link: '/exercises' },
+        { title: 'Spinning', link: '/exercises/#spinning' },
+        { title: 'Power joga', link: '/exercises/#powerjoga' },
+        { title: 'Bosu', link: '/exercises/#bosu' },
+        { title: 'Kruhový trénink', link: '/exercises/#kruhovy' }
       ],
       socialItems: [
         { link: 'https://www.facebook.com/profile.php?id=100009177529273', icon: 'fab fa-facebook-square' },
