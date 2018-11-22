@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <the-header offsetTop="200" />
-    <v-img :src="require('~/assets/pics/slide.jpg')" max-height="579px">
+    <v-img :src="require('~/assets/pics/hero.jpg')" max-height="579px">
       <v-layout column fill-height class="lightbox white--text" align-center justify-center>
         <v-flex shrink>
           <h1 class="white--text">CVÍČO VESTEC</h1>
