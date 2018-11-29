@@ -7,6 +7,7 @@
       v-for="(item, index) in akce"
       :key="index"
     >{{ item.item }}</h2>
+    <h3><a href="http://www.dovolena-cviceni.cz/capro-tym/doudova">Click here to book this trip!</a></h3>
   </div>
 </template>
 
