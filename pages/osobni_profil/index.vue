@@ -14,6 +14,8 @@
           <h3>Osobní profil:</h3>
           <p>Narodila jsem se 26.5.1978 - ve znamení Blíženců. Aerobicu se věnuji cca od svých 16 let. Zaměřuji se na různé formy cvičení - dance aerobic, P-class, body-stylling, body-bar, step aerobic, dále fitbox a spinning.</p>
           <h3>Dosažené vzdělání:</h3>
+          <p>* r. 2018 - BodyART Stretch</p>
+          <p>* r. 2017 - BodyART Instructor</p>
           <p>* r. 2015 - deepWORK Instructor</p>
           <p>* r. 2013 - Piloxing Instructor</p>
           <p>* r. 2011 - Zumba Basics</p>

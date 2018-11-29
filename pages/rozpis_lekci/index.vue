@@ -1,8 +1,11 @@
 <template>
   <v-container>
+    <v-layout justify-center>
+      <switch-location />
+    </v-layout>
     <v-layout class="mt-5" justify-center row v-bind="binding" ref="app">
       <v-flex xs12 sm6>
-        <v-img :src="require('~/assets/pics/rozpis.png')"></v-img>
+        <exercise-schedule />
       </v-flex>
       <v-flex xs12 sm6>
         <div class="ml-4">
@@ -25,7 +28,14 @@
 </template>
 
 <script>
+import ExerciseSchedule from '~/components/PageSections/ExerciseSchedule'
+import SwitchLocation from '~/components/PageSections/SwitchLocation'
+
 export default {
+  components: {
+    ExerciseSchedule,
+    SwitchLocation
+  },
   computed: {
     binding () {
       const binding = {}

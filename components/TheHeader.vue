@@ -34,7 +34,7 @@ export default {
         { title: 'HOME', link: '/' },
         { title: 'AKTUALITY', link: '/aktuality' },
         { title: 'ROZPIS LEKCÍ', link: '/rozpis_lekci' },
-        { title: 'EXERCISES', link: '/exercises' },
+        { title: 'CVIČENÍ', link: '/cviceni' },
         { title: 'OSOBNÍ PROFIL', link: '/osobni_profil' },
         { title: 'INSTRUKTOŘI', link: '/instruktori' },
         { title: 'KONTAKT', link: '/kontakt' }
@@ -54,6 +54,6 @@ export default {
 <style lang="stylus" scoped>
 h1 
   font-weight normal 
-  font-family 'Caveat', cursive 
+  // font-family 'Caveat', cursive 
   font-size 3rem
 </style>
