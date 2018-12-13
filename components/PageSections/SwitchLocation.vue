@@ -1,9 +1,9 @@
 <template>
   <v-container>
     <v-layout justify-center>
-      <h3>Choose location:</h3>
-      <v-btn @click="switchLocation('vestec')">Vestec</v-btn>
-      <v-btn @click="switchLocation('dobříš')">Dobříš</v-btn>
+      <h3>Vybrat lokalitu:</h3>
+      <v-btn large @click="switchLocation('vestec')">Vestec</v-btn>
+      <v-btn large @click="switchLocation('dobříš')">Dobříš</v-btn>
     </v-layout>
   </v-container>
 </template>

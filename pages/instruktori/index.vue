@@ -7,7 +7,7 @@
     >
       <v-layout justify-center row v-bind="binding" ref="app">
         <v-flex xs12 sm6 lg4>
-          <v-img :src="require('~/assets/pics/' + item.src)"></v-img>
+          <v-img v-if="item.src" :src="require('~/assets/pics/' + item.src)"></v-img>
         </v-flex>
         <v-flex xs12 sm6 min-height="100%" class="pl-3 info--text">
           <h1>{{ item.name }}</h1>
@@ -33,6 +33,7 @@ export default {
           name: 'Zuzana Doudová',
           sub: 'Dosažené vzdělání:',
           zItems: [
+            { item: 'BodyART Instructor' },
             { item: 'deepWORK Instructor' },
             { item: 'Piloxing Instructor' },
             { item: 'Zumba Basics' },
@@ -51,6 +52,12 @@ export default {
           zItems: [
             { item: 'Power jóga, lektor jógy pro těhotné systémem A. Smékalové' },
             { item: 'Workshopy:  Vinyasa, Prana Flow, asistence v ásánách' }
+          ]
+        },
+        {
+          name: 'Tomáš Klápa',
+          zItems: [
+            { item: 'Spinning' }
           ]
         }
       ]
