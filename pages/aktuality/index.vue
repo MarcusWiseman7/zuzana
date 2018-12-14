@@ -1,9 +1,10 @@
 <template>
   <v-container>
     <h1 class="mt-5 mb-4 info--text">Co se u nás děje?</h1>
-    <v-img :src="require('~/assets/pics/party.jpg')"></v-img>
-    <h1 class="my-4 info--text"><li>V našem fitness bez problémů můžete využít kartu MultiSport</li></h1>
+    <!-- <v-img :src="require('~/assets/pics/party.jpg')"></v-img> -->
     
+    <current-events />
+
     <h2 v-if="akce[0].item" class="mb-1 info--text" style="textDecoration:underline">Další připravované akce:</h2>
     <h2 
       class="info--text"
@@ -22,7 +23,12 @@
 </template>
 
 <script>
+import CurrentEvents from '~/components/PageSections/CurrentEvents'
+
 export default {
+  components: {
+    CurrentEvents
+  },
   data () {
     return {
       items: [
