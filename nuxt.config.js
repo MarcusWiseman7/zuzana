@@ -46,6 +46,7 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
+    ['@nuxtjs/proxy', { pathRewrite: { '^/index.html#' : '' } }],
     ['nuxt-google-maps-module', {
       /* module options */
       key: 'AIzaSyCVigyU8MS0c_UMndHnuodKxH62Ensl2Zs', // Default
