@@ -23,11 +23,11 @@
         <switch-location />
       </v-layout>
       <v-layout justify-center v-bind="binding" ref="app">
-        <v-flex xs12 sm6>
+        <v-flex xs12 sm4 md5 lg6>
           <h1>Co se u nás děje?</h1>
           <current-events />
         </v-flex>
-        <v-flex xs12 sm6 md4>
+        <v-flex xs12 sm8 md7 lg6>
           <exercise-schedule />
         </v-flex>
       </v-layout>
