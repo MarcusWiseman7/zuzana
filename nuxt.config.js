@@ -1,9 +1,4 @@
 const pkg = require('./package')
-// const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-//   router: {
-//     base: '/<repository-name>/'
-//   }
-// } : {}
 
 module.exports = {
   mode: 'spa',
@@ -23,25 +18,7 @@ module.exports = {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Caveat|Material+Icons' }
     ]
   },
-  router: {
-    scrollBehavior(to, from, savedPosition) {
-      if (savedPosition) {
-        return savedPosition
-      } else {
-        let position = {}
-        if (to.matched.length < 2) {
-          position = { x: 0, y: 0 }
-        } else if (to.matched.some(r => r.components.default.options.scrollToTop)) {
-          position = { x: 0, y: 0 }
-        }
-        if (to.hash) {
-          position = { selector: to.hash }
-        }
-        return position
-      }
-    }
-  },
-  // ...routerBase,
+  
   /*
   ** Customize the progress-bar color
   */
