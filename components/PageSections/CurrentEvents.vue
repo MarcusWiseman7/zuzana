@@ -1,27 +1,35 @@
 <template>
   <div>
     <h3 class="my-3">V našem fitness bez problémů můžete využít kartu MultiSport</h3>
-    <h2 v-if="akce[0].item" class="mb-1" style="textDecoration:underline">Další připravované akce:</h2>
-    <template
-      v-if="akce[0].item" 
-      v-for="(item, index) in akce"
-    >
-      <h2 :key="index">{{ item.item }}</h2>
-      <h3 v-if="item.link" :key="item.link"><a :href="item.link">{{ item.linkText }}</a></h3>
-    </template>
+    <h2
+      v-if="akce[0].item"
+      class="mb-1"
+      style="textDecoration:underline"
+    >Další připravované akce:</h2>
+    <div v-if="akce[0].item">
+      <template v-for="(item, index) in akce">
+        <h2 :key="index">{{ item.item }}</h2>
+        <h3
+          v-if="item.link"
+          :key="item.link"
+        ><a :href="item.link">{{ item.linkText }}</a></h3>
+      </template>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'current-events',
-  data () {
+  data() {
     return {
       akce: [
-        { item: '5.1.2019 - Novoroční cvičební párty Vestec (2 hod cvíča)' },
-        { item: '19.1.2019 - Novoroční cvičební párty Dobříš (2 hod cvíča)' },
-        { item: '17.-19.5. Cvičební víkend ve Starém Světě', link: 'http://www.dovolena-cviceni.cz/capro-tym/doudova', linkText: 'Click here to book this trip!' },
-        { item: '21. - 29.6.2019 - Cvičení u moře, Chorvatsko, Polynesia, Umag' },
+        { item: '15.9.2019 - BodyART & DeepWORK Day, Euforie Smíchov (od 9 do 11 hod)' },
+        { item: '19.10.2019 - BodyART & Fitbox, Euforie Pankrác (od 10 do 12 hod)' },
+        { item: '7.12.2019 - Čertovské cvíčo, BodyART + posilko, Euforie Pankrác (od 10 do 12 hod)' },
+        { item: '3-5.4.2020 - Sportovní víkend Starý Svět' },
+        { item: '29-31.5.2020 - Sportovní víkend Orea Resort Horizont Šumava' },
+        { item: '22-29.6.2020 - Cvičení u moře – Chorvatsko Lanterna' }
       ]
     }
   }
@@ -29,7 +37,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-h1, h2 
-  font-weight normal
-  letter-spacing 1px
+h1, h2 {
+  font-weight: normal;
+  letter-spacing: 1px;
+}
 </style>
