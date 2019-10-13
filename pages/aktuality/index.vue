@@ -2,11 +2,6 @@
   <v-container>
     <h1 class="mt-5 mb-4 info--text">Co se u nás děje?</h1>
     <v-img
-      :src="require('~/assets/pics/flyer12.9.jpg')"
-      alt="flyer"
-    ></v-img>
-    <br />
-    <v-img
       :src="require('~/assets/pics/flyer22.11.jpg')"
       alt="flyer"
     ></v-img>

@@ -5,7 +5,9 @@
       v-if="akce[0].item"
       class="mb-1"
       style="textDecoration:underline"
-    >Další připravované akce:</h2>
+    >
+      Další připravované akce:
+    </h2>
     <div v-if="akce[0].item">
       <template v-for="(item, index) in akce">
         <h2 :key="index">{{ item.item }}</h2>
@@ -24,8 +26,8 @@ export default {
   data() {
     return {
       akce: [
-        { item: '15.9.2019 - BodyART & DeepWORK Day, Euforie Smíchov (od 9 do 11 hod)' },
         { item: '19.10.2019 - BodyART & Fitbox, Euforie Pankrác (od 10 do 12 hod)' },
+        { item: '22-24.11.2019 - Giga Sportovní víkend v Harrachově' },
         { item: '7.12.2019 - Čertovské cvíčo, BodyART + posilko, Euforie Pankrác (od 10 do 12 hod)' },
         { item: '3-5.4.2020 - Sportovní víkend Starý Svět' },
         { item: '29-31.5.2020 - Sportovní víkend Orea Resort Horizont Šumava' },
