@@ -1,73 +1,72 @@
-const pkg = require('./package')
+const pkg = require("./package");
 
 module.exports = {
-  mode: 'spa',
+  mode: "spa",
   router: {
-    mode: 'hash',
+    mode: "hash"
   },
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
     title: pkg.name,
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { hid: "description", name: "description", content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Caveat|Material+Icons' }
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "stylesheet",
+        href:
+          "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Caveat|Material+Icons"
+      }
+    ],
+    script: [
+      {
+        src: "https://api.mapy.cz/loader.js"
+      }
     ]
   },
-  
-  /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#fff' },
 
   /*
-  ** Global CSS
-  */
-  css: [
-    '~/assets/style/app.styl'
-  ],
+   ** Customize the progress-bar color
+   */
+  loading: { color: "#fff" },
 
   /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-    '@/plugins/vuetify'
-  ],
+   ** Global CSS
+   */
+  css: ["~/assets/style/app.styl"],
 
   /*
-  ** Nuxt.js modules
-  */
+   ** Plugins to load before mounting the App
+   */
+  plugins: ["@/plugins/vuetify"],
+
+  /*
+   ** Nuxt.js modules
+   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios',
-    ['@nuxtjs/proxy', { pathRewrite: { '^/index.html#' : '' } }],
-    ['nuxt-google-maps-module', {
-      /* module options */
-      key: 'AIzaSyCVigyU8MS0c_UMndHnuodKxH62Ensl2Zs', // Default
-    }]
+    "@nuxtjs/axios",
+    ["@nuxtjs/proxy", { pathRewrite: { "^/index.html#": "" } }]
   ],
   /*
-  ** Axios module configuration
-  */
+   ** Axios module configuration
+   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
   },
 
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     /*
-    ** You can extend webpack config here
-    */
-    extend(config, ctx) {
-      
-    }
+     ** You can extend webpack config here
+     */
+    extend(config, ctx) {}
   }
-}
+};
