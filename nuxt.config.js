@@ -53,6 +53,14 @@ module.exports = {
     "@nuxtjs/axios",
     ["@nuxtjs/proxy", { pathRewrite: { "^/index.html#": "" } }]
   ],
+  buildModules: [
+    [
+      "@nuxtjs/google-analytics",
+      {
+        id: "UA-154926536-1"
+      }
+    ]
+  ],
   /*
    ** Axios module configuration
    */
